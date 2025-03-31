@@ -1,33 +1,25 @@
-1. Work Summary
-This week, I studied and implemented form-based login in the IBM WebSphere Liberty server. I reviewed the IBM support documentation and understood the login flow defined by the Jakarta EE specification, as well as Liberty-specific configurations.
+1. Work Completed This Week
+GQJG Authorization Issue Analysis
 
-Main tasks completed:
+Collaborated with Broadcom to investigate the authorization failure in the GQJG environment.
 
-Configured web.xml to define login-config, security constraints, and roles
+Compared logs from Colin’s and Neha’s environments.
 
-Created custom login.html and error.html pages
+Identified that the group GQJG_clients_qo is being returned from SiteMinder, but the role is not defined in the ibm-bnd.xmi file, which caused Liberty to deny authorization.
 
-Implemented and tested the j_security_check form submission
+Provided recommendations to define the missing group in Liberty configuration and align the SiteMinder mapping.
 
-Set up a simple user registry and mapped roles using ibm-application-bnd.xml
+Deployment of New SQCI Application on OpenShift
 
-Verified correct handling of the WASReqURL cookie during redirection
+Deployed the updated SQCI application in the new OpenShift environment following the system upgrade.
 
-2. Key Learnings
-Gained hands-on experience with Java EE security standards
+Resolved compatibility issues due to OpenShift version changes.
 
-Learned how Liberty handles form-based login and session management
+Verified deployment through smoke testing to confirm service stability.
 
-Understood the difference between standard Java EE behavior and Liberty-specific features (e.g., WASReqURL)
+2. Plans for Next Week
+Assist with validation testing after the group mapping fix in the GQJG environment.
 
-3. Issues Encountered
-Encountered issues with incorrect form action URL (missing j_security_check)
+Support integration of the new SQCI app into the CI/CD pipeline.
 
-Error page redirection failed due to a missing path in the web.xml configuration
-
-4. Next Week Plan
-Explore integration with LDAP or federated user registries
-
-Add logout functionality and session timeout handling
-
-Research options for single sign-on (SSO) and token-based authentication
+Begin drafting internal documentation on updated OpenShift deployment procedures.
