@@ -1,5 +1,24 @@
-I’m grateful for the opportunity to contribute to the Liberty project and grow within the IT Engineering team. Over the past year, I’ve taken on additional responsibilities, especially during the period when a senior resource was unavailable. I led Liberty-related development and deployment activities, supported integration with SiteMinder, and participated in troubleshooting complex configuration issues. I also started working on the new OpenShift-based deployment pipeline, which helped me expand my skills in cloud-native application support.
+Weekly Report
 
-I appreciate the trust placed in me by my manager and the collaborative environment fostered by the team. I’ve learned a great deal from working independently and from the helpful guidance of senior teammates. While I continue to improve in areas such as reporting and documentation, I’m proud of the progress I’ve made in understanding system architecture, security integration, and enterprise deployment processes.
+This week, I worked through several important technical areas:
 
-I look forward to continuing to grow in this role, taking on new challenges, and supporting upcoming projects. I’m also happy to mentor others who are new to the team, just as others have helped me.
+EZPT - TTNF Authentication Investigation
+I reviewed the TTNF authentication flow in the EZPT system. After analyzing logs and configuration files, I identified issues causing authentication failures and proposed corrections to streamline the process.
+
+GQIG - Session Management Adjustment
+I focused on session creation, validation, and expiration for GQIG. Adjustments were made to ensure proper session persistence after authentication, reducing unauthorized session errors.
+
+Configuration and Environment Setup
+I updated Liberty server configurations, optimized JVM options, and refined security settings to support session and credential passing with SiteMinder.
+
+Log Analysis and Debugging
+I actively analyzed message logs, HTTP traces, and debug outputs to trace authentication behavior. Session and role mappings were carefully verified against SiteMinder headers.
+
+Broadcom Sample Reference Integration
+I reviewed Broadcom sample EAR structures and successfully adapted critical settings to our application environment to ensure compliance with SiteMinder integration.
+
+Planning for Scripted Testing
+Final authentication validation and session mapping work will be completed next week together with SSC. After that, scripting for automated testing will be scheduled to ensure end-to-end verification.
+
+Conclusion:
+Authentication configuration is now accurate. Next week, I will complete final validation jointly with SSC, and plan to start writing automation scripts for comprehensive testing.
