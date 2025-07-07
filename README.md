@@ -1,43 +1,23 @@
-Weekly Report
+1. Liberty/SiteMinder Upgrade Use Case Validation
+	•	Task: Support validation of use cases and application flows for the upgraded Liberty/SiteMinder solution.
+	•	Progress:
+	•	Confirmed the proposed RDL cutover date is Wednesday, July 16.
+	•	Currently working with the team to finalize and test all required use cases, ensuring they run successfully both pre- and post-cutover.
+	•	Next Steps:
+	•	Continue preparing and testing remaining use cases before the cutover date.
+	•	Support regression testing after cutover.
 
-This week, I worked through several important technical areas:
+⸻
 
-EZPT - TTNF Authentication Investigation
-I reviewed the TTNF authentication flow in the EZPT system. After analyzing logs and configuration files, I identified issues causing authentication failures and proposed corrections to streamline the process.
-
-GQIG - Session Management Adjustment
-I focused on session creation, validation, and expiration for GQIG. Adjustments were made to ensure proper session persistence after authentication, reducing unauthorized session errors.
-
-Configuration and Environment Setup
-I updated Liberty server configurations, optimized JVM options, and refined security settings to support session and credential passing with SiteMinder.
-
-Log Analysis and Debugging
-I actively analyzed message logs, HTTP traces, and debug outputs to trace authentication behavior. Session and role mappings were carefully verified against SiteMinder headers.
-
-Broadcom Sample Reference Integration
-I reviewed Broadcom sample EAR structures and successfully adapted critical settings to our application environment to ensure compliance with SiteMinder integration.
-
-Planning for Scripted Testing
-Final authentication validation and session mapping work will be completed next week together with SSC. After that, scripting for automated testing will be scheduled to ensure end-to-end verification.
-
-Conclusion:
-Authentication configuration is now accurate. Next week, I will complete final validation jointly with SSC, and plan to start writing automation scripts for comprehensive testing.
-1. EZPT – Session Configuration Update
-	•	Reviewed and updated session configuration in Liberty to ensure cross-node persistence.
-	•	Investigated the <httpSession> cloned attribute and aligned it with WLP server requirements.
-	•	Completed testing to confirm stable session behavior across distributed environments.
-
-2. GQIG – Role Naming and Access Structure Adjustment
-	•	Refactored role naming conventions for clarity and simplified management.
-	•	Updated role-to-permission mappings to ensure alignment with actual responsibilities.
-	•	Confirmed with the team that role changes did not introduce any regression issues.
-
-3. Externalization of Stateful Properties
-	•	Identified remaining stateful configuration items needing externalization.
-	•	Externalized most key properties to facilitate flexible deployment across environments.
-	•	Backed up original configuration files as advised before making changes.
-
-4. VLFS – Setup of Liberty 03 Test Server
-	•	Provisioned and configured Liberty 03 instance for VLFS testing.
-	•	Integrated SiteMinder and ensured broker communication is functioning.
-	•	Completed initial connectivity validation; awaiting business testing feedback.
+2. TTNF Activation Issue in RDL2
+	•	Task: Investigate the TTNF (Test to New Function) activation issue in the RDL2 environment.
+	•	Progress:
+	•	Held multiple calls with Jiaming. Identified that although the status has changed to Finished, the “Generate Notification Code” button remains in blue and does not activate.
+	•	Involved BU versions include:
+	•	PIPINT (OC1), PIPINT_R2235_7, PIPWS_R2235_6, PIPEXTWS,
+PIPEXTWS_R680_MR1814_1, PIPEXT (SC1), PIPEXT_R2235_7,
+PIPASYNC (LR1), PIPASYNC_R2235_5
+	•	Action Taken:
+	•	Terry suggested checking with Jiaming or Fei for comparison, as Fei reportedly got it working.
+	•	Next Steps:
+	•	Collaborate with the development team to investigate the cause and fix the issue with the activation code button logic.
